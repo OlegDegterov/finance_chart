@@ -1,0 +1,36 @@
+.panel {
+  display: grid;
+  gap: 20px;
+  padding: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 500;
+}
+
+.hint {
+  font-size: 14px;
+  color: var(--fg-muted);
+}
+
+.buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.warning {
+  padding: 12px;
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.error {
+  color: var(--danger);
+}

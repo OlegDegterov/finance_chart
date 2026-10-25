@@ -1,0 +1,37 @@
+.panel {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  min-height: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 480px) {
+  .controls {
+    gap: 6px;
+    padding: 8px 10px;
+  }
+}
+
+.tableToggle {
+  min-height: 36px;
+  font-size: 14px;
+}
+
+.tableToggle[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+.chart {
+  min-height: 0;
+  padding: 4px 0 0;
+}

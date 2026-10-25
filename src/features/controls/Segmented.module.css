@@ -1,0 +1,44 @@
+.group {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.group button {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  min-height: 40px;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.group[data-compact='true'] button {
+  min-height: 36px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .group[data-compact='true'] button {
+    padding: 0 8px;
+    font-size: 13px;
+  }
+}
+
+@media (hover: hover) {
+  .group button:hover:not([aria-pressed='true']) {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+}
+
+.group button + button {
+  border-left: 1px solid var(--border);
+}
+
+.group button[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
